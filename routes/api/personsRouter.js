@@ -18,6 +18,7 @@ router.route("/")
    .then(dbresults => {
     console.log("this is the return for get specific")
     console.log(dbresults)
+    res.setHeader('Access-Control-Allow-Origin','*');
     res.json(dbresults)
   })
   .catch(err => res.status(422).json(err))
