@@ -10,7 +10,7 @@ var corsOptions = {
 }
 
 
-router.route("/", cors(corsOptions))
+router.route("/")
   .get((req, res) => {
     console.log("in the base api request")
 

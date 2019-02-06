@@ -17,7 +17,9 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // Allow cors
-app.use(cors());
+app.use(cors({
+  origin: "*"
+}));
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/practiceserver");
