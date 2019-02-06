@@ -1,0 +1,55 @@
+
+
+server holds info
+
+- first
+- last
+- age
+- favShows : []
+- favFoods : []
+
+
+
+
+api queries
+
+order the app will search if all are present
+- &last
+- &first
+- &age
+- &favShows
+- &favFoods
+
+
+
+
+
+
+API base = https://sheltered-shore-44622.herokuapp.com/api/persons?person 
+
+Query options = 
+- &age= 
+- &last_name=
+- &first_name=
+
+
+API url (view all)
+https://sheltered-shore-44622.herokuapp.com/api/persons/all
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
