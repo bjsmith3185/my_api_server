@@ -25,7 +25,7 @@ order the app will search if all are present
 
 
 
-API base = https://sheltered-shore-44622.herokuapp.com/api/persons?person 
+API base = https://aqueous-hamlet-95160.herokuapp.com/api/persons?person 
 
 Query options = 
 - &age= 
@@ -33,8 +33,10 @@ Query options =
 - &first_name=
 
 
+
+
 API url (view all)
-https://sheltered-shore-44622.herokuapp.com/api/persons/all
+https://aqueous-hamlet-95160.herokuapp.com/api/persons/all
 
 
 
