@@ -2,7 +2,7 @@ const router = require("express").Router();
 const personRoutes = require("./personsRouter");
 // const checkKeyRouter = require("./keyRouter");
 
-// checkPassword routes
+// route for persons api
 router.use("/persons", personRoutes);
-// router.use("/key", checkKeyRouter)
+
 module.exports = router;

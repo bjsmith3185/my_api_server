@@ -16,12 +16,8 @@ if (process.env.NODE_ENV === "production") {
 // Add routes, both API and view
 app.use(routes);
 
-// Allow cors
-// app.use(cors({
-//   origin: "*"
-// }));
 
-
+// add npm CORS to app
 var allowedOrigins = ['http://localhost:3000'];
 app.use(cors({
   origin: function(origin, callback){
@@ -36,9 +32,6 @@ app.use(cors({
     return callback(null, true);
   }
 }));
-
-
-
 
 
 // Connect to the Mongo DB

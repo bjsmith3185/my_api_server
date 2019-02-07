@@ -1,5 +1,21 @@
 
 
+todos
+
+- add a function to retreive api keys from a db collection, keyChecker.js
+
+-  figure out how to add data to the api using excel spreadsheet
+
+
+
+
+
+
+
+
+
+
+
 server holds info
 
 - first

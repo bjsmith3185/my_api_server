@@ -3,23 +3,13 @@
 module.exports = {
 
   check: function (url) {
-    console.log("key checker function")
-    // return new Promise((resolve, reject) => {
-      let urlParams = new URLSearchParams(url)
-      console.log(urlParams)
-
-      let authorized = urlParams.get('key')
-      if (authorized !== "1234") {
-        const notValid = "not authorized"
-        return false
-        // resolve(notValid);
-      } else {
-        return true
-      }
-     
-
-
-  // })
+    let urlParams = new URLSearchParams(url)
+    // removes the key value from url to check if it is valid.
+    let authorized = urlParams.get('key')
+    if (authorized !== "1234") {
+      return false
+    } else {
+      return true
+    }
   },
-
 };

@@ -2,10 +2,6 @@
 building a practice server for an api using npm instead of yarn
 
 
-
-
-
-
 Structure: 
         API base = https://my-api-server-practice.herokuapp.com/api/persons?person 
 

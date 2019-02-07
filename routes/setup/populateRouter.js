@@ -3,7 +3,7 @@ const router = require("express").Router();
 const persons = require("../../controllers/personsController");
 
 
-// Matches with "/populate/users"
+// Matches with "/populate"
 
 const dataSeedArray = [
     {
@@ -43,6 +43,7 @@ const dataSeedArray = [
 ]
 
 
+// This route will populate the persons collection with the array above.
 
 router.route("/")
     .get((req, res) => {
