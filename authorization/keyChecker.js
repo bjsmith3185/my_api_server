@@ -1,11 +1,9 @@
-const router = require("express").Router();
-const personsController = require("../controllers/personsController");
-const db = require("../models");
+
 
 module.exports = {
 
-  allRequest: function (url) {
-    console.log("@@@@@@@@@@@")
+  check: function (url) {
+    console.log("key checker function")
     // return new Promise((resolve, reject) => {
       let urlParams = new URLSearchParams(url)
       console.log(urlParams)
@@ -13,12 +11,12 @@ module.exports = {
       let authorized = urlParams.get('key')
       if (authorized !== "1234") {
         const notValid = "not authorized"
-        return notValid
+        return false
         // resolve(notValid);
+      } else {
+        return true
       }
      
-  
-    return personsController.findAll()
 
 
   // })
