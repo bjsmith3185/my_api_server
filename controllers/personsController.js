@@ -11,25 +11,68 @@ module.exports = {
 
   },
 
-  findFirstName: function (name) {
-    console.log("!findOne")
+  findFirstLastAge: function(first, last, age) {
     return db.Person
-      .find({first: name})
-
+    .find({last: last, first: first, age: age})
   },
 
-  findMatching: function (data) {
-    console.log("findmatching")
+  findFirstLast: function(first, last) {
     return db.Person
-    .find( {last: { $all: data}})
+    .find({last: last, first: first})
   },
 
-  findByQuery: function (data) {
-    console.log(data);
+  findLastAge: function (last, age) {
+    return db.Person
+    .find({last: last, age: age})
+  },
+
+  findFirstAge: function (first, age) {
+    return db.Person
+    .find({first: first, age: age})
+  },
+
+  findLast: function (last) {
+    return db.Person
+    .find({last: last})
+  },
+
+  findFirst: function (first) {
+    return db.Person
+    .find({first: first})
+  },
+
+  findAge: function (age) {
+    return db.Person
+    .find({age: age})
+  },
+
+
+
+
+
+
+
+
+
+  // findFirstName: function (name) {
+  //   console.log("!findOne")
+  //   return db.Person
+  //     .find({first: name})
+
+  // },
+
+  // findMatching: function (data) {
+  //   console.log("findmatching")
+  //   return db.Person
+  //   .find( {last: { $all: data}})
+  // },
+
+  // findByQuery: function (data) {
+  //   console.log(data);
     
-    return db.Person
-    .find(data)
-  },
+  //   return db.Person
+  //   .find(data)
+  // },
 
   createMany: function (data) {
     console.log("!!!!! create many")

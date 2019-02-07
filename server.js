@@ -22,8 +22,7 @@ app.use(routes);
 // }));
 
 
-var allowedOrigins = ['http://localhost:3000',
-                      'http://yourapp.com'];
+var allowedOrigins = ['http://localhost:3000'];
 app.use(cors({
   origin: function(origin, callback){
     // allow requests with no origin 

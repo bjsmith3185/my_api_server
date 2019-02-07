@@ -18,28 +18,35 @@ module.exports = {
         let age = urlParams.get('age');
 
         if ( lastName && firstName && age ) {
-            return db.Person
-            .find({last: lastName, first: firstName, age: age})
+            return personsController.findFirstLastAge(firstName, lastName, age)
+            // return db.Person
+            // .find({last: lastName, first: firstName, age: age})
         } else if ( lastName && firstName ) {
-            return db.Person
-            .find({last: lastName, first: firstName})
+            return personsController.findFirstLast(firstName, lastName)
+            // return db.Person
+            // .find({last: lastName, first: firstName})
         } else if ( lastName && age ) {
-            return db.Person
-            .find({last: lastName, age: age})
+            return personsController.findLastAge(firstName, age)
+            // return db.Person
+            // .find({last: lastName, age: age})
         } else if ( firstName && age ) {
-            return db.Person
-            .find({first: firstName, age: age})
+            return personsController.findFirstAge(firstName, age)
+            // return db.Person
+            // .find({first: firstName, age: age})
         } else if ( lastName ) {
-            return db.Person
-            .find({last: lastName})
+            return personsController.findLast(lastName)
+            // return db.Person
+            // .find({last: lastName})
         } else if ( firstName ) {
-            return db.Person
-            .find({first: firstName})
+            return personsController.findFirst(firstName)
+            // return db.Person
+            // .find({first: firstName})
         } else if ( age ) {
-            return db.Person
-            .find({age: age})
+            return personsController.findAge(age)
+            // return db.Person
+            // .find({age: age})
         } else {
-            const noQuery = "No query provided"
+            const noQuery = {data: "No query provided"}
             return noQuery
         }
     
