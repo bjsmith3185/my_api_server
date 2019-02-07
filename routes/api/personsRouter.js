@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const personsController = require("../../controllers/personsController");
-const createSearch = require("../../searchParameters/defineSearch")
+const createSearch = require("../../searchParameters/defineSearch");
+const returnAllResults = require("../../searchParameters/returnAll");
 
 // Matches with "/api/persons"
 
@@ -20,13 +21,10 @@ router.route("/")
 
   })
 
-
-
-
-router.route("/all")
+  router.route("/all")
   .get((req, res) => {
     console.log("in the get request")
-    personsController.findAll()
+    returnAllResults.allRequest(req.url)
       .then(dbresults => {
         console.log("this is the return for get all")
         console.log(dbresults)
@@ -35,6 +33,20 @@ router.route("/all")
       })
       .catch(err => res.status(422).json(err))
   });
+
+
+// router.route("/all")
+//   .get((req, res) => {
+//     console.log("in the get request")
+//     personsController.findAll()
+//       .then(dbresults => {
+//         console.log("this is the return for get all")
+//         console.log(dbresults)
+//         res.setHeader('Access-Control-Allow-Origin', '*');
+//         res.json(dbresults)
+//       })
+//       .catch(err => res.status(422).json(err))
+//   });
 
 
 
