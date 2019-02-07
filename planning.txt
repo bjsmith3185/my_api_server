@@ -1,5 +1,8 @@
 
 
+Heroku app name: my-api-server-bjs
+
+
 todos
 
 - add a function to retreive api keys from a db collection, keyChecker.js
@@ -38,7 +41,7 @@ order the app will search if all are present
 
 
 
-heroku name: https://my-api-server-practice.herokuapp.com/
+heroku name: https://my-api-server-bjs.herokuapp.com/
 
 
 
@@ -54,13 +57,13 @@ heroku name: https://my-api-server-practice.herokuapp.com/
 
 Example api request for persons with first name 'brian'
 
-        https://my-api-server-practice.herokuapp.com/api/persons?person&key=1234&first_name=brian
+        https://my-api-server-bjs.herokuapp.com/api/persons?person&key=1234&first_name=brian
 
 
 
 
 API url (view all)
-https://my-api-server-practice.herokuapp.com/api/persons/all
+https://my-api-server-bjs.herokuapp.com/api/persons/all
 
 
 

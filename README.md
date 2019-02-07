@@ -3,7 +3,7 @@ building a practice server for an api using npm instead of yarn
 
 
 Structure: 
-        API base = https://my-api-server-practice.herokuapp.com/api/persons?person 
+        API base = https://my-api-server-bjs.herokuapp.com/api/persons?person 
 
 
     Default key
@@ -17,11 +17,11 @@ Structure:
 
 Example api request for persons with first name 'brian'
 
-        https://my-api-server-practice.herokuapp.com/api/persons?person&key=1234&first_name=brian
+        https://my-api-server-bjs.herokuapp.com/api/persons?person&key=1234&first_name=brian
 
 
 
 
 API url (view all)
-https://my-api-server-practice.herokuapp.com/api/persons/all
+https://my-api-server-bjs.herokuapp.com/api/persons/all
 
