@@ -22,25 +22,29 @@ order the app will search if all are present
 
 
 
+heroku name: https://my-api-server-practice.herokuapp.com/
 
 
 
-API base = https://aqueous-hamlet-95160.herokuapp.com/api/persons?person 
 
-Query options = 
-- &age= 
-- &last_name=
-- &first_name=
+  Default key
+        - &key=1234
+
+    Query options = 
+        - &age= 
+        - &last_name=
+        - &first_name=
+
+
+Example api request for persons with first name 'brian'
+
+        https://my-api-server-practice.herokuapp.com/api/persons?person&key=1234&first_name=brian
 
 
 
 
 API url (view all)
-https://aqueous-hamlet-95160.herokuapp.com/api/persons/all
-
-
-
-
+https://my-api-server-practice.herokuapp.com/api/persons/all
 
 
 

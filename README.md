@@ -1,7 +1,7 @@
 # server_using_npm
 building a practice server for an api using npm instead of yarn
 
-heroku name: https://my-api-server-practice.herokuapp.com/
+
 
 
 
