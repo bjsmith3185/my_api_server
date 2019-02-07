@@ -53,7 +53,7 @@ router.route("/all")
       res.json(notValid)
     }
 
-    returnAllResults.allRequest(req.url)
+    // returnAllResults.allRequest(req.url)
 
   });
 
