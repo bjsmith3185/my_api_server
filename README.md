@@ -15,13 +15,20 @@ Structure:
         - &first_name=
 
 
-Example api request for persons with first name 'brian'
-
+* Example api request for persons with first name 'brian'
         https://my-api-server-bjs.herokuapp.com/api/persons?person&key=1234&first_name=brian
 
+* API url (view all)
+        https://my-api-server-bjs.herokuapp.com/api/persons/all
 
 
+* Example using fetch()
 
-API url (view all)
-https://my-api-server-bjs.herokuapp.com/api/persons/all
+    var url = "https://my-api-server-bjs.herokuapp.com/api/persons?person&key=1234&first_name=brian";
+
+      fetch(url)
+      .then((resp) => resp.json())
+        .then(function(data) {
+            console.log(data)
+        })
 
