@@ -1,3 +1,4 @@
 module.exports = {
-  Person: require("./persons")
+  Person: require("./persons"),
+  ApiUser: require("./apiUsers")
 };

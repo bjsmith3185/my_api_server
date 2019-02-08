@@ -1,11 +1,26 @@
 
+database name: practiceserver 
+collections: persons , apiusers 
 
 Heroku app name: my-api-server-bjs
 
 
+
+
+
+
+
+
+
 todos
 
-- add a function to retreive api keys from a db collection, keyChecker.js
+- when email is back up, see if i can remove the validateNewKeys.js file, also on keyCreator.js 
+
+- insert a email validation tool on the createKey()
+
+- test the api entered in the url to see if it is valid
+
+
 
 -  figure out how to add data to the api using excel spreadsheet
 
@@ -33,6 +48,7 @@ server holds info
 api queries
 
 order the app will search if all are present
+- &all=people (only valid value)
 - &last
 - &first
 - &age

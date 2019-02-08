@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+require('dotenv').load()
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -36,6 +37,7 @@ app.use(cors({
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/practiceserver");
+
 
 // Start the API server
 app.listen(PORT, function() {

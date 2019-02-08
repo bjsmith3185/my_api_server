@@ -9,8 +9,14 @@ module.exports = {
         let lastName = urlParams.get('last_name');
         let firstName = urlParams.get('first_name');
         let age = urlParams.get('age');
+        let all = urlParams.get('all');
+        console.log(all)
 
-        if (lastName && firstName && age) {
+
+        if (all === 'people') {
+            return personsController.findAll()
+
+        } else if (lastName && firstName && age) {
             return personsController.findFirstLastAge(firstName, lastName, age)
 
         } else if (lastName && firstName) {
@@ -32,8 +38,10 @@ module.exports = {
             return personsController.findAge(age)
 
         } else {
-            const noQuery = { data: "No query provided" }
-            return noQuery
+            return new Promise((resolve, reject) => {
+                const noQuery = { data: "No query provided" }
+                resolve(noQuery);
+            })
         }
 
     },
