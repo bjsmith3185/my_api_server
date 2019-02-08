@@ -1,7 +1,7 @@
 
 const router = require("express").Router();
 const persons = require("../../controllers/personsController");
-const users = require("../../controllers/aiUsersController");
+const users = require("../../controllers/apiUsersController");
 
 const usersSeed = {
     email: "test@email.com",
