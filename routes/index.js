@@ -11,6 +11,9 @@ router.use("/api", apiRoutes);
 // Route to add data to api database
 router.use("/populate", populateRoutes);
 
+// Route to add data to api database
+router.use("/populate", populateRoutes);
+
 // Route to send api key
 router.use("/key", createKey);
 

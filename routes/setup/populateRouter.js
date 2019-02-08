@@ -1,7 +1,12 @@
 
 const router = require("express").Router();
 const persons = require("../../controllers/personsController");
+const users = require("../../controllers/aiUsersController");
 
+const usersSeed = {
+    email: "test@email.com",
+    key: "123456"
+}
 
 // Matches with "/populate"
 
@@ -66,6 +71,31 @@ router.route("/")
             })
             .catch(err => res.status(422).json(err))
     });
+
+
+    // This route will populate the apiusers collection with the info above.
+
+router.route("/users")
+.get((req, res) => {
+    console.log("reaching server: /populate/users")
+
+   
+    users.removeAll()
+        .then(dbresults => {
+                console.log("removed all")
+            
+                users.insertNewApi(usersSeed)
+                    .then(dbresults => {
+                        console.log("deleted and populated apiUsers collection")
+                        console.log(dbresults);
+
+                    })
+                    .catch(err => res.status(422).json(err))
+          
+            res.json("success")
+        })
+        .catch(err => res.status(422).json(err))
+});
 
 
 module.exports = router;
