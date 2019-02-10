@@ -37,5 +37,5 @@ Structure:
 TO APPLY FOR AN API KEY
     visit https://bjsmith3185.github.io/My_API_homepage/
 
-    
+
 
