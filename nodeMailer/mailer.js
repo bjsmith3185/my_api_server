@@ -52,7 +52,7 @@ router.route("/")
 
                         // email the user their new info
                         let mailOptions = {
-                            from: '"API response" <bjsapi@outlook.com>', // sender address
+                            from: '"API response" <practiceapi@outlook.com>', // sender address
                             to: userEmail, // list of receivers
                             subject: "API key", // Subject line
                             text: `Thank you for signing up for the special API.
@@ -70,16 +70,16 @@ router.route("/")
                             // html: "<b>Hello world?</b>" // html body
                         };
 
-                        // transporter.sendMail(mailOptions, function (error, info) {
-                        //     if (error) {
+                        transporter.sendMail(mailOptions, function (error, info) {
+                            if (error) {
 
-                        //         res.json("it messed up....")
-                        //         return console.log(error);
-                        //     }
+                                res.json("it messed up....")
+                                return console.log(error);
+                            }
 
-                        //     console.log("Message sent: %s", info.messageId);
-                        //     res.json("email sent")
-                        // })
+                            console.log("Message sent: %s", info.messageId);
+                            res.json("email sent")
+                        })
 
                     })
                     .catch(err => console.log(err))
